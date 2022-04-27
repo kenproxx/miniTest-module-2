@@ -32,7 +32,7 @@ public class Directory implements Manager<User>{
     }
 
     @Override
-    public void update(int id, User user) throws IOException {
+    public void update(int id, User user) {
         if (search(id) != -1) {
             userList.set(id, user);
         } else {
@@ -41,7 +41,7 @@ public class Directory implements Manager<User>{
     }
 
     @Override
-    public void delete(int id) throws IOException {
+    public void delete(int id) {
         if (search(id) != -1) {
             userList.remove(id);
             System.out.println("Da xoa thanh cong");
